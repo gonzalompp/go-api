@@ -5,6 +5,7 @@ steps:
   image: golang:1.14-alpine
   environment:
     GO11MODULE: on
+    CGO_ENABLED: 0
   commands:
     - "go test -race ./..."
 - name: build
