@@ -2,10 +2,10 @@ kind: pipeline
 name: default
 steps:
 - name: test
-  image: golang:1.14-alpine
+  image: golang:1.14
   commands:
     - "go test -race ./..."
 - name: build
-  image: golang:1.14-alpine
+  image: golang:1.14
   commands:
     - "go build cmd/api/main.go"
