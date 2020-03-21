@@ -4,10 +4,10 @@ steps:
 - name: test
   image: golang:1.14-alpine
   environment:
-    - GO11MODULE=on
+    - "GO11MODULE=on"
   commands:
-    - go test -race ./...
+    - "go test -race ./..."
 - name: build
   image: golang:1.14-alpine
   commands:
-    - go build cmd/api/main.go
+    - "go build cmd/api/main.go"
