@@ -4,8 +4,8 @@ steps:
 - name: test
  image: golang:1.14-alpine
  commands:
-   - "go test"
+   - "go test ./..."
 - name: build
  image: golang:1.14-alpine
  commands:
-   - "go build -o ./myapp"
+   - "go build cmd/api/main.go "
