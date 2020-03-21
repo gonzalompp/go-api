@@ -4,7 +4,7 @@ steps:
 - name: test
   image: golang:1.14-alpine
   environment:
-    - "GO11MODULE=on"
+    GO11MODULE: on
   commands:
     - "go test -race ./..."
 - name: build
