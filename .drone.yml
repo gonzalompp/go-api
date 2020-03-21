@@ -3,9 +3,11 @@ name: default
 steps:
 - name: test
   image: golang:1.14-alpine
+  environment:
+    - GO11MODULE=on
   commands:
-    - "go test ./..."
+    - go test -race ./...
 - name: build
   image: golang:1.14-alpine
   commands:
-    - "go build cmd/api/main.go "
+    - go build cmd/api/main.go
