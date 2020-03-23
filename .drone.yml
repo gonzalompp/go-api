@@ -15,7 +15,7 @@ steps:
   settings:
     repo: gonzalompp/go-api
     username:
-      from_secret: dockerhub_unsermane
+      from_secret: dockerhub_username
     password:
       from_secret: dockerhub_password
     tags:
