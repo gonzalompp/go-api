@@ -31,5 +31,6 @@ steps:
       from_secret: k8s_certificate
     kubernetes_token:
       from_secret: k8s_token
+    kubernetes_user: do-fra1-k8-go-api-admin
   commands:
     - kubectl get pods
