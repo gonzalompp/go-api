@@ -25,6 +25,7 @@ steps:
 - name: deliver
   image: sinlead/drone-kubectl
   settings:
+    namespace: do-fra1-k8-go-api
     kubernetes_server:
       from_secret: k8s_server
     kubernetes_cert:
