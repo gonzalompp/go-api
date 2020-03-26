@@ -34,4 +34,4 @@ steps:
     k8s_user:
       from_secret: k8s_user
   commands:
-    - "ls -la"
+    - echo $PLUGIN_K8S_SERVER
