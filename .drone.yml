@@ -34,5 +34,5 @@ steps:
     kubernetes_user:
       from_secret: k8s_user
   commands:
-    - kubectl config set-credentials "$PLUGIN_KUBERNETES_USER}" --token="$PLUGIN_KUBERNETES_TOKEN"
+    - kubectl config set-credentials "$PLUGIN_KUBERNETES_USER" --token="$PLUGIN_KUBERNETES_TOKEN"
     - kubectl get pods
