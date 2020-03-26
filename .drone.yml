@@ -23,15 +23,16 @@ steps:
 #      - ${DRONE_COMMIT_SHA:0:7}
 #      - ${DRONE_COMMIT_BRANCH}
 - name: deliver
-  image: gonzalompp/drone-kubectl:v1.0.5
+  image: sinlead/drone-kubectl
   settings:
-    k8s_server:
+    kubernetes_server:
       from_secret: k8s_server
-    k8s_certificate:
+    kubernetes_cert:
       from_secret: k8s_certificate
-    k8s_token:
+    kubernetes_token:
       from_secret: k8s_token
-    k8s_user:
+    kubernetes_user:
       from_secret: k8s_user
   commands:
+    - kubectl config set-credentials ${PLUGIN_KUBERNETES_USER} --token=${PLUGIN_KUBERNETES_TOKEN}
     - kubectl get pods
