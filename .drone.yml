@@ -34,7 +34,4 @@ steps:
     k8s_user:
       from_secret: k8s_user
   commands:
-    - echo "AAA $PLUGIN_K8S_SERVER"
-    - echo "BBB $K8S_SERVER"
-    - echo "CCC $plugin_k8s_server"
-    - echo "DDD $k8s_server"
+    - kubectl get pods
