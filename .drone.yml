@@ -23,7 +23,7 @@ steps:
 #      - ${DRONE_COMMIT_SHA:0:7}
 #      - ${DRONE_COMMIT_BRANCH}
 - name: deliver
-  image: gonzalompp/drone-kubectl:v1.0.3
+  image: gonzalompp/drone-kubectl:v1.0.4
   settings:
     k8s_server:
       from_secret: k8s_server
