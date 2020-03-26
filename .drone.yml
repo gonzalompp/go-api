@@ -33,5 +33,13 @@ steps:
       from_secret: k8s_token
     k8s_user:
       from_secret: k8s_user
+    k8s_prueba: "gonzalo"
   commands:
-    - kubectl get pods
+    - echo "AAA $PLUGIN_K8S_USER"
+    - echo "BBB $K8S_USER"
+    - echo "CCC $plugin_k8s_user"
+    - echo "DDD $k8s_user"
+    - echo "EEE $PLUGIN_K8S_PRUEBA"
+    - echo "QQQ $K8S_PRUEBA"
+    - echo "WWW $plugin_k8s_prueba"
+    - echo "EEE $k8s_prueba"
