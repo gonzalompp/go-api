@@ -23,15 +23,15 @@ steps:
 #      - ${DRONE_COMMIT_SHA:0:7}
 #      - ${DRONE_COMMIT_BRANCH}
 - name: deliver
-  image: sinlead/drone-kubectl
+  image: gonzalompp/drone-kubectl
   settings:
-    namespace: do-fra1-k8-go-api
-    kubernetes_server:
+    k8s_server:
       from_secret: k8s_server
-    kubernetes_cert:
+    k8s_certificate:
       from_secret: k8s_certificate
-    kubernetes_token:
+    k8s_token:
       from_secret: k8s_token
-    kubernetes_user: do-fra1-k8-go-api-admin
+    k8s_user:
+      from_secret: k8s_user
   commands:
-    - kubectl apply -f deployment.yml
+    - kubectl get pods
