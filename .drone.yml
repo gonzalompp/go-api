@@ -50,4 +50,4 @@ steps:
       from_secret: k8s_user
   commands:
     - kubectl config set-credentials "$PLUGIN_KUBERNETES_USER" --token="$PLUGIN_KUBERNETES_TOKEN"
-    - kubectl rollout status deployment/go-api-deployment -w
+    - kubectl rollout status deployment/go-api-deployment --timeout=30s -w
