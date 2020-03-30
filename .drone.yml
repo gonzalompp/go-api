@@ -35,5 +35,5 @@ steps:
       from_secret: k8s_user
   commands:
     - kubectl config set-credentials "$PLUGIN_KUBERNETES_USER" --token="$PLUGIN_KUBERNETES_TOKEN"
-    - kubectl apply -f deployment.yaml
+    - kubectl apply -f deployment.yml
     - kubectl set image gonzalompp/go-api go-api=go-api:${DRONE_COMMIT_SHA:0:7} --record
