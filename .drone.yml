@@ -24,7 +24,7 @@ steps:
 #      - ${DRONE_COMMIT_BRANCH}
 - name: deliver
   image: sinlead/drone-kubectl
-  settings:teni q vender
+  settings:
     kubernetes_server:
       from_secret: k8s_server
     kubernetes_cert:
