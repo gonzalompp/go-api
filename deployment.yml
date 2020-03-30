@@ -29,7 +29,7 @@ spec:
         role: app
     spec:
       containers:
-        - name: app
+        - name: api
           image: "gonzalompp/go-api"
           resources:
             requests:

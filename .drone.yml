@@ -36,4 +36,4 @@ steps:
   commands:
     - kubectl config set-credentials "$PLUGIN_KUBERNETES_USER" --token="$PLUGIN_KUBERNETES_TOKEN"
     - kubectl apply -f deployment.yml
-    - kubectl set image deployment/go-api-deployment go-api=gonzalompp/go-api:${DRONE_COMMIT_SHA:0:7} --record
+    - kubectl set image deployment/go-api-deployment api=gonzalompp/go-api:${DRONE_COMMIT_SHA:0:7} --record
