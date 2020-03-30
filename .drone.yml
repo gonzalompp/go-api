@@ -10,18 +10,18 @@ steps:
   image: golang:1.14
   commands:
     - "go build cmd/api/main.go"
-#- name: dockerhub
-#  image: plugins/docker
-#  settings:
-#    repo: gonzalompp/go-api
-#    username:
-#      from_secret: dockerhub_username
-#    password:
-#      from_secret: dockerhub_password
-#    tags:
-#      - latest
-#      - ${DRONE_COMMIT_SHA:0:7}
-#      - ${DRONE_COMMIT_BRANCH}
+- name: dockerhub
+  image: plugins/docker
+  settings:
+    repo: gonzalompp/go-api
+    username:
+      from_secret: dockerhub_username
+    password:
+      from_secret: dockerhub_password
+    tags:
+      - latest
+      - ${DRONE_COMMIT_SHA:0:7}
+      - ${DRONE_COMMIT_BRANCH}
 - name: deliver
   image: sinlead/drone-kubectl
   settings:
