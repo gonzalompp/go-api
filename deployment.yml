@@ -34,3 +34,9 @@ spec:
           resources:
             requests:
               cpu: 10m
+          env:
+            - name: SECRET_HELLO_MESSAGE
+              valueFrom:
+                secretKeyRef:
+                  name: go-api-secret
+                  key: hello-message
